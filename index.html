@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>City_Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/index.js" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script src="js/geocode.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="logo"><img src="images/logo.png" alt="" /></div>
+    <p id="info">Чтобы начать игру, нажмите <button id="start">START</button></p> <span id="anew_button"><button class="anew">Начать заново</button></span>
+
+    <p id="see_rules">Смотреть правила</p>
+    <div id="rules_info" class="rules_hide">
+        <p>В ходе игры человек и компьютер по очереди называют города таким образом, чтобы название следующего города начиналось на последнюю букву предыдущего.</p>
+        <p>Исключения составляют названия, оканчивающиеся на твёрдый и мягкий знаки, а также буквы «Ы» и «Й»: в таких случаях участник называет город на предпоследнюю букву.</p>
+        <p>Названия городов не должны повторяться.</p>
+        <p>Все города отмечаются на карте, которую вместе со списком и количеством названных городов каждым игроком можно посмотреть после окончания игры.</p>
+        <p>Игра продолжается до тех пор, пока у одного из участников не закончатся варианты.</p>
+        <p>Компьютер имеет список городов, который также доступен и Вам. Когда в этом списке нет города, начинающегося с последней буквы города, названного соперником, игрок автоматически проигрывает.</p>
+        <p>После нажатия кнопки «Start», автоматически производится выбор игрока, который ходит первым.</p>
+        <p class="see_cities_list">Посмотреть список городов</p>
+        <p class="cities_list"></p>
+    </div>
+
+
+    <script type="text/javascript">
+        if('webkitSpeechRecognition' in window) {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = 'ru-RU';
+            recognition.onresult = function(event) {
+                if (event.results.length > 0) {
+                    text_person.value = event.results[0][0].transcript;
+                }
+            }
+        }
+
+    </script>
+
+
+    <div class="player" id="person">
+        <p>Вы</p>
+        <form autocomplete="off">
+            <label>
+                <input type="text" id="text_person" disabled />
+            </label>
+            <button class="send" id="send_person" type="submit" title="Нажмите для отправки (или Enter)" disabled>ОК</button>
+            <input type="button" id="click_to_speak" onclick="recognition.start()" title="Нажмите для голосового ввода" disabled />
+        </form>
+
+        <p id="message"></p>
+        <button class="hide" id="rezults">Посмотреть результаты</button>
+        <button class="hide" id="reload">Начать заново</button>
+        <button class="hide" id="surrender" title="При нажатии Вы автоматически проиграете">Сдаться</button>
+    </div>
+
+    <div class="player" id="comp">
+        <p>Компьютер</p>
+        <label>
+            <input type="text" id="text_comp" disabled>
+        </label>
+        <button class="send" id="send_comp" disabled>ОК</button>
+    </div>
+
+    
+    <div class="rezults_list">
+        <div class = "rezults_list_div" id="person_rezult">
+            <p>Вы: <span id="person_array_length"></span></p>
+            <img src="images/green_coord.png" alt="" /><div id="person_array"></div>
+        </div> 
+        <div class = "rezults_list_div" id="comp_rezult">
+            <p>Компьютер: <span id="comp_array_length"></span></p>
+            <img src="images/red_coord.png" alt="" /><div id="comp_array"></div>
+        </div>
+        <p class="rezults_info">На карте отмечены названные города. Для увеличения масштаба карты щелкните по ней дважды левой кнопкой мыши, для уменьшения - правой.</p>
+         
+    </div>
+
+    <div class="map_hide" id="map"></div>
+
+</body>
+</html>
