@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Z-GAME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/gsap.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body>
+  <nav>
+    <img src="images/home.png" alt="" id="mimg" />
+    <ul class="menu-list" >
+      <li id="about">Об игре</li>
+      <li id="scrin">Скриншоты</li>
+      <li id="plays">Играть</li>
+      <li id="autor">Об авторе</li>
+    </ul>
+  </nav>
+  <header>
+    <div class="header-wrapper" id="mimg_link">
+      <h1>Z-GAME</h1>
+      <h2>Детская интеллектуальная игра</h2>
+      <button id="about_li" class="details">Подробнее</button>
+    </div>
+</header>
+<article class="about-game" id="about_link">
+  <a name="about_link"></a>
+  <h2>Об игре</h2>
+  <div class="game-description">
+    <section class="target-audience">
+      <h3>Целевая аудитория:</h3>
+      <p>дети 6-8 лет, обладающие базовыми знаниями математики и английского языка</p>
+    </section>
+    <section class="essence-game">
+      <h3>Суть игры:</h3>
+      <p>правильно выполняя задания, уничтожить как можно больше игровых монстров</p>
+    </section>
+    <section class="resolution">
+      <h3>Системные требования:</h3>
+      <p>новейшая версия браузера; разрешение экрана не менее 1024х768px</p>
+    </section>
+  </div>  
+</article>
+  
+<article class="screenshots" id="scrin_link">
+  <h2>Скриншоты</h2> 
+  <div class="slider-block">
+    <input type='radio' name='slider' id='slide-1' checked/>
+    <input type='radio' name='slider' id='slide-2'/>
+    <input type='radio' name='slider' id='slide-3'/>
+    <input type='radio' name='slider' id='slide-4'/>
+    <input type='radio' name='slider' id='slide-5'/>    
+      <div class="screen">
+        <div class="commands">
+          <label for='slide-1'></label>
+          <label for='slide-2'></label>
+          <label for='slide-3'></label>
+          <label for='slide-4'></label>
+          <label for='slide-5'></label>
+        </div>
+        <a class="prev">&#10094</a>
+        <a class="next">&#10095</a>
+        <div class="slider-container">
+          <img src="images/screen-1.png" alt="" />
+          <img src="images/screen-2.png" alt="" />
+          <img src="images/screen-3.png" alt="" />
+          <img src="images/screen-4.png" alt="" />
+          <img src="images/screen-5.png" alt="" />
+        </div>
+      </div>
+      <div class="active">
+        <label for='slide-1'></label>
+        <label for='slide-2'></label>
+        <label for='slide-3'></label>
+        <label for='slide-4'></label>
+        <label for='slide-5'></label>
+      </div>
+    </div>
+</article>
+  
+<article class="play-game" id="plays_link">
+  <h2>Перейти к игре</h2>
+  <p>Для старта нажмите кнопку</p>
+  <a href="http://z-game.vrminsk.by"><button class="play">Играть</button></a>
+</article>
+  
+<article class="developer" id="autor_link">
+  <h2>Об авторе</h2>
+  <img src="images/photo.png" alt="photo" />
+  <p class="name">Анжелика Пригоцкая</p>
+  <p class="profession">Фронт-енд-разработчик</p>
+  <a href="https://github.com/a-lika"  class="social-links">
+    <img src="images/github.png" class="social-links" alt="github-icon" />
+  </a>
+</article>
+<footer>
+  © 2018
+</footer>
+  
+</body>
+</html>
