@@ -1,0 +1,244 @@
+body, html	{
+    margin:0 auto;
+    padding:0;
+    max-width: 100%;
+    text-align:center;
+    font-size: 24px;
+    background-image: url("images/cities.png");
+    background-color: #ebe1d0;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+}
+input   {
+    width: 300px;
+    font-size: 18px;
+    height: 25px;
+}
+button  {
+    min-width: 50px;
+    font-size: 14px;
+    height: 30px;
+}
+input, button   {
+    border-style: outset;
+    border-radius: 7px;
+}
+#info   {
+     padding: 30px 0;
+     height: 18px;
+     font-weight: 800;
+     overflow: hidden;
+}
+#start  {
+    background-color: #95d475;
+    width: 75px;
+    height: 35px;
+}
+#click_to_speak {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border: none;
+    margin: 20px -310px -80px 310px;
+    background-image: url("images/mikrophone.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#surrender  {
+    margin-top: 10px;
+    width: 90px;
+    background-color: #ebebeb;
+    color: #5c5c5c;
+    display: block;
+}
+#text_comp, #text_person  {
+    background-color: white;
+}
+#rezults    {
+    margin-top: 100px;
+    width: 190px;
+}
+#reload {
+    margin-top: 100px;
+    width: 150px;
+    background-color: #ebebeb;
+    color: #5c5c5c;
+}
+#message  {
+    font-size: 20px;
+    color: #ff0300;
+    height: 15px;
+    width: 300px;
+}
+#anew_button    {
+    display: none;
+}
+#person_array, #comp_array  {
+    display: inline-block;
+    vertical-align: top;
+    width: 450px;
+    margin-left: 5px;
+    font-size: 18px;
+}
+#see_rules  {
+    font-size: 17px;
+    color: #7d7d7d;
+    margin: -20px auto 0;
+    width: 180px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#rules_info {
+    background-color: #ffffff;
+    font-size: 20px;
+    border-radius: 7px;
+    width: 1000px;
+    margin: 0 auto;
+}
+#rules_info p {
+    padding: 10px 15px 0;
+    font-size: 18px;
+    text-align: left;
+    color: #424242;
+}
+#map    {
+    width: 100%;
+}
+.logo{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+.logo img   {
+    width: 120px;
+}
+.player {
+    display: inline-block;
+    vertical-align: text-top;
+    margin: 10px;
+    padding: 20px 100px;
+    min-height: 370px;
+    border: 1px dashed #a9a9a9;
+    text-align: left;
+    background-color: #fafafa;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-radius: 7px;
+    z-index: 2;
+}
+.rezults_info   {
+    font-size: 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+.anew {
+    background-color: #95d475;
+    width: 120px;
+}
+.rezults_list   {
+    margin-top: -100%;
+}
+.rezults_list_div {
+    display: inline-block;
+    vertical-align: text-top;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 1px dashed #a9a9a9;
+    width: 500px;
+    text-align: left;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-radius: 7px;
+}
+.rezults_list_div img    {
+    display: inline-block;
+    vertical-align: top;
+}
+.send   {
+    color: #000000;
+}
+.back_color  {
+    background-color: #defdff;
+}
+.bold   {
+    font-weight: 900;
+    color: red;
+}
+.winner {
+    background-color: #95d475;
+}
+.hide   {
+    visibility: hidden;
+}
+.see_cities_list    {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 800;
+}
+.rules_hide {
+    height: 0;
+}
+.rules_hide p {
+    visibility:hidden;
+}
+.cities_list {
+    display: none;
+    font-size: 16px;
+    font-style: italic;
+    background-color: #ffffff;
+    text-align: left;
+}
+.cities_array   {
+    display: inline-block;
+}
+.map_hide   {
+    height: 800px;
+    margin-top: -100%;
+    opacity: 0;
+}
+@keyframes rezult_vis{
+	0% {margin-top: -100%;}
+	100% {margin-top: 0;}
+}
+@keyframes rules_vis{
+	0% {height:0;}
+	100% {height:100%;}
+}
+@keyframes rules_vis_p{
+	0% {visibility:hidden;}
+	100% {visibility:visible;}
+}
+@keyframes map_vis  {
+	0% {opacity: 0; margin-top: -100%;}
+	1% {opacity: 0; margin-top: 0;}
+	100% {opacity: 1; margin-top: 0;}
+}
+.rezults_list_visible    {
+    animation:rezult_vis 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    animation-fill-mode:forwards;
+    -webkit-animation: rezult_vis 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    -webkit-animation-fill-mode:forwards;
+}
+.rules_visible  {
+    animation:rules_vis 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    animation-fill-mode:forwards;
+    -webkit-animation: rules_vis 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    -webkit-animation-fill-mode:forwards;
+}
+.rules_visible p {
+    animation:rules_vis_p 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    animation-fill-mode: forwards;
+    -webkit-animation:rules_vis_p 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    -webkit-animation-fill-mode:forwards;
+}
+.map_visible    {
+    animation:map_vis 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s;
+    animation-fill-mode: forwards;
+    -webkit-animation: map_vis 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)) 0.7s;
+    -webkit-animation-fill-mode:forwards;
+}

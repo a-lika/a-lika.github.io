@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Match-Match Game</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="start-game">
+    <div class="rules">
+      <h5>Welcome to</h5>
+      <h1>Match-Match Game</h1>
+      <div class="about-game">
+        <h3>Memory is a counter game where the object is to find pairs</h3>
+        <h3>When the game begins all pictures are hidden</h3>
+      </div>
+      <h3>How to play</h3>
+      <ul>
+        <li>Select two cards to try to match the pictures</li>
+        <li>If you match the pictures you can go again</li>
+        <li>If they don't match it is the computer turn them</li>
+        <li>The player that finds all pairs wins</li>
+        <li>Have Fun!</li>
+      </ul>
+      <button class="continue"></button>
+      <p>Continue</p>
+    </div>
+  </div>
+  
+  <div class="registration-container hidden">
+    <div class="registration">
+      <h2>Sign up and start the game</h2>
+      <form>
+        <label>First Name:<input type="text" name="first_name" maxlength="20" required /></label>
+        <label>Last Name:<input type="text" name="last_name" maxlength="20" required /></label>
+        <label>E-mail:<input type="email" name="email" maxlength="30" required /></label>       
+        <h3 class="choose">Choose:</h3>
+        <div id="choose-block-container">
+          <div class="choose-cards-container">
+            <h3>Back cards</h3>
+            <div class="choose-cards">
+              <div>
+                <input type="radio" name="back" id="back_1" />
+                <label for="back_1"><img src="images/chameleon.jpg" alt="chameleon" /></label>
+              </div>
+              <div>
+                <input type="radio" name="back" id="back_2" checked />          
+                <label for="back_2"><img src="images/banan.jpg" alt="banan" /></label>
+              </div>
+              <div>
+                <input type="radio" name="back" id="back_3"/>          
+                <label for="back_3"><img src="images/cake.jpg" alt="cake" /></label>
+              </div>
+            </div>
+          </div>
+          <div class="choose-cards-container">
+            <h3>Game difficulty</h3>
+            <div class="choose-cards">
+              <div>
+                <input type="radio" name="level" id="level_1" />
+                <label for="level_1">Low (5 x 2)</label>
+              </div>
+              <div>
+                <input type="radio" name="level" id="level_2" checked />
+                <label for="level_2">Medium (6 x 3)</label>
+              </div>
+              <div>
+                <input type="radio" name="level" id="level_3" />
+                <label for="level_3">High (8 x 3)</label>
+              </div>
+            </div>
+          </div>
+        </div>              
+        <button type="submit" class="start" id="start">Start</button>
+        <p>New Game</p>
+      </form>      
+    </div>
+  </div>
+    
+  <div class="game-container hidden">
+    <div class="game-menu">
+      <div class="gamer-name"></div>
+        <div>
+          <p class="game-link" id="options">Options</p>
+        </div>
+        <div class="timer">
+          <span id="minutes">00</span> :
+          <span id="seconds">00</span>
+        </div>
+        <div>
+          <p class="game-link" id="score">Score</p>
+        </div> 
+        <div>
+          <button class="new-game" id="new-game">New Game</button>
+        </div>          
+      </div>
+      <div class="game-field">
+        <div class="menu-info hidden">
+          <div class="menu-content"></div>
+          <div class="close"></div>
+        </div>
+        <div class="card-field"></div>
+      </div>
+    </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

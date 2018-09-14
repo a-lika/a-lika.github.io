@@ -1,0 +1,424 @@
+@font-face {
+  font-family: "cartoonist_hand";
+  src: url("../fonts/sf_cartoonist_hand-webfont.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  text-align: center;
+  font: 26px "cartoonist_hand", sans-serif;
+  background-image: url('../images/bubbles.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 900;
+  color: rgb(255, 211, 40);
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: 500;
+  color: rgb(255, 211, 40);
+}
+
+h3 {
+  font-size: 36px;
+  padding: 20px;
+  font-weight: 500;
+  color: rgb(112, 220, 220);
+}
+
+.start-game, 
+.registration-container,
+.game-container{
+  width: 900px;
+  background-color: rgba(0, 0, 0, .7);
+  margin: 20px auto;
+  padding: 70px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, .5);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.game-container {
+  width: 90%;
+  min-width: 1400px;
+  min-height: 900px;
+  padding: 30px 5px;
+}
+
+.game-menu {
+  width: 97%;
+  padding: 30px 0;
+  border-top: 1px dotted rgb(112, 220, 220);
+  border-bottom: 1px dotted rgb(112, 220, 220);
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+
+.game-menu div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 11%;
+  padding: 0 3%;
+}
+
+.gamer-name {
+  font: 20px 'Helvetica', sans-serif;
+  color: rgb(255, 211, 40);
+}
+
+.start-game ul {
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.game-link {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+.game-link:hover {
+  color: rgb(112, 220, 220);
+}
+
+.start-game li {
+  list-style-image: url('../images/arrow_small.png');
+}
+
+.continue, 
+.start,
+.new-game{
+  width: 200px;
+  height: 60px;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .8);
+  background-color: rgb(255, 211, 40);
+  margin: 50px auto 5px;
+  border-radius: 2px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.continue { 
+  background-image: url('../images/arrow_big.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-position .3s ease-in;
+}
+
+.continue:hover {
+  background-position: 55%;
+}
+
+.rules, 
+.registration {
+  width: 900px;
+}
+
+.about-game {
+  padding: 30px;
+}
+
+.about-game h3{
+  color: #ffffff;
+  padding: 7px;
+}
+
+.rules-move {
+  transform: translateX(100%);
+  transition: transform .5s ease-in-out;
+}
+
+.registration {
+  transform: translateX(-100%);
+}
+
+.registration-move{
+  animation: move .5s ease-in-out .3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move{
+  0%{ transform: translateX(-100%); }
+  80%{ transform: translateX(10%); }
+  100%{ transform: translateX(0); }
+}
+
+.registration form {
+  margin: 40px auto 0;
+  color: #ffffff;
+}
+
+.registration form > label {
+  width: 400px;
+  margin: 0 auto;
+  text-align: right;
+  display: block;
+}
+
+.registration form input {
+  background-color: inherit;
+  margin: 10px;
+  font-size: 21px;
+  border: none;
+  border-bottom: 2px solid rgb(112, 220, 220);
+  outline: none;
+  color: rgb(112, 220, 220);
+}
+
+.start, .new-game {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  background-image: linear-gradient(to top, rgb(255, 211, 40) 0%, rgb(255, 211, 40) 50%, rgb(112, 220, 220) 51%, rgb(112, 220, 220) 100%);
+  background-size: auto 200%;
+  background-position: 0 100%;
+  transition: background-position .5s cubic-bezier(.075, .82, .165, 1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+
+.start:hover, .new-game:hover {
+  background-position: 0 0;
+}
+
+.new-game {
+  margin: 0 auto;
+  width: 140px;
+  height: 50px;
+  font-size: 20px;
+}
+
+h3.choose {
+  color: #ffffff;
+  margin: 30px 0 0;
+}
+
+.choose-cards-container{
+  width: 350px;
+  margin: 0 20px 30px;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+
+.choose-cards{
+  background: #ffffff;
+  padding: 15px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, .5);
+  color: rgb(90, 90, 90);
+  border-radius: 5px;
+}
+
+.choose-cards img {
+  height: 100%;
+}
+
+input[type='radio'] ~ label {
+  display: block;
+  height: 100px;
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+  line-height: 100px;
+  cursor: pointer;
+  margin: 1px 0;
+  transition: all .3s ease-in;
+}
+
+.choose-cards label:hover,
+input:checked ~ label {
+  border: 3px solid rgb(112, 220, 220);
+}
+
+.timer {
+  font-size: 45px;
+  border-left: 1px dotted rgb(112, 220, 220);
+  border-right: 1px dotted rgb(112, 220, 220);
+}
+
+.game-field {
+  padding: 30px 0;
+  position: relative;
+}
+
+.card-field {
+  margin: 0 auto;
+}
+
+.menu-info  {
+  width: 91%;
+  min-height: 650px;
+  position: absolute;
+  left: 5%;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, .85);
+  z-index: 3;
+  border: 5px dotted rgb(112, 220, 220);
+  box-shadow: 5px 5px 25px 15px rgba(112, 220, 220, .3);
+}
+
+.close{
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 24px;
+  content: ' ';
+  height: 50px;
+  width: 2px;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.close:hover::before, .close:hover::after {  
+  background-color: rgb(112, 220, 220);
+}
+
+.infoCongrats {
+  background-color: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoCongrats h2 {
+  font-size: 140px;
+}
+
+.infoCongrats h3 {
+  font-size: 70px;
+}
+
+.infoCongrats .close {
+  display: none;
+}
+
+table {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 100px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+
+table caption {
+  padding: 10px;
+  color: rgb(255, 211, 40);
+  font-size: 36px;
+}
+table th  {
+  padding: 10px;
+  color: rgb(112, 220, 220);
+}
+table td  {
+  padding: 5px 10px;
+}
+
+.card-container, 
+.front-card, 
+.back-card {
+  width: 140px;
+  height: 200px;
+  cursor: pointer; 
+}
+
+.card-container {
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.card {
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all .4s linear;
+}
+
+.front-card, 
+.back-card {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+  border: 5px solid grey;
+  border-radius: 5px;
+  box-shadow: 8px 10px 15px rgba(0, 0, 0, .8);
+}
+
+.back-card {
+  z-index: 1;
+}
+
+.front-card {
+  transform: rotateY(180deg);
+  margin-left: -10px;
+}
+
+.flip-card .card {
+  transform: rotateY(180deg);
+}
+
+.transform-card {
+  animation: rotate .4s ease-in-out .3s;
+  animation-fill-mode: forwards;
+  -webkit-animation: rotate .4s ease-in-out .3s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+  0%{transform: rotate(-20deg); opacity : 1; visibility: visible; }
+  25%{transform: rotate(20deg);}
+  50%{transform: rotate(-20deg);}
+  75%{transform: rotate(20deg);}
+  100%{transform: rotate(0); opacity : 0; visibility: hidden;}
+}
+
+.choose-cards input, 
+.hidden {
+  display: none;
+}
